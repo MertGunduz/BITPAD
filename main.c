@@ -9,10 +9,11 @@ int main()
     char OPERATION_ANSWER[2];
 
     // BINARY DATA
-    char BINARY[64];
+    char BINARY[16];
     int BINARY_DECIMALVALUE = 1;
     short BINARY_REPEAT = 0;
     int BIT_VALUE;
+    int BIT_INDEX;
 
     // DECIMAL DATA
     int DECIMAL;
@@ -80,6 +81,22 @@ int main()
 
         printf("ENTER BINARY NUMBER --> ");
         scanf("%s", BINARY);
+
+        printf("\n"); // | LINE BREAKER |
+
+        BIT_INDEX = sizeof(BINARY) - 1;
+
+        for (int i = 0; i < sizeof(BINARY); i++)
+        {
+            if (BINARY[i] == '1')
+            {
+                DECIMAL = DECIMAL + pow(2, BIT_INDEX);
+            }
+
+            BIT_INDEX--;
+        }
+
+        printf("DECIMAL RESULT --> %d\n", DECIMAL);
     }
 
     return 0;

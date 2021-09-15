@@ -1,8 +1,7 @@
 # depslib dependency file v1.0
-1631649240 source:d:\codeblockprojects\bitpad\main.c
+1631711969 source:d:\codeblockprojects\bitpad\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	<ctype.h>
 	<math.h>
 
